@@ -67,6 +67,7 @@ export default function AIBot() {
         inputStyle={{ // This will style the input area
           margin: '1em', // Add some margin around the input
         }}
+        bubbleStyle={{ whiteSpace: 'pre-line' }}
       />
     </div>
   );

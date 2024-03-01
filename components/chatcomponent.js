@@ -10,8 +10,8 @@ export default function ChatComponent(props) {
         };
 
         websocketRef.current.onmessage = function(event) {
-            const data = JSON.parse(event.data);
-            const message = JSON.stringify(data.message, null, 2);
+            let data = JSON.parse(event.data);
+            let message = data.message;
 
             // Trigger the next step using the output from the WebSocket API
             triggerNextStep({ value: message, trigger: 'nextStepId' });
